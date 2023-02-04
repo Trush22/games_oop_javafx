@@ -1,5 +1,6 @@
 package ru.job4j.puzzle;
 
+import org.hamcrest.MatcherAssert;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -16,7 +17,7 @@ public class WinTest {
                 {0, 0, 1, 0, 0},
                 {0, 0, 1, 0, 0},
         };
-        assertThat(Win.check(board), is(true));
+        MatcherAssert.assertThat(Win.check(board), is(true));
     }
 
     @Test
@@ -28,7 +29,7 @@ public class WinTest {
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0},
         };
-        assertThat(Win.check(board), is(true));
+        MatcherAssert.assertThat(Win.check(board), is(true));
     }
 
     @Test
@@ -40,7 +41,7 @@ public class WinTest {
                 {0, 0, 1, 0, 0},
                 {0, 0, 1, 0, 0},
         };
-        assertThat(Win.check(board), is(false));
+        MatcherAssert.assertThat(Win.check(board), is(false));
     }
 
     @Test
@@ -52,6 +53,6 @@ public class WinTest {
                 {0, 0, 0, 1, 0},
                 {1, 1, 1, 1, 0},
         };
-        assertThat(Win.check(board), is(false));
+        MatcherAssert.assertThat(Win.check(board), is(false));
     }
 }
